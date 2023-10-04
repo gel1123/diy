@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Todoアプリとして動作するWidget
 class Todo extends StatefulWidget {
   const Todo({super.key});
 
@@ -8,8 +9,10 @@ class Todo extends StatefulWidget {
 }
 
 class _TodoState extends State<Todo> {
+  /// Todo名を状態として格納するリスト
   final List<String> _todoItems = [];
 
+  /// Todoを追加するメソッド
   void _addTodoItem(String task) {
     // Only add the task if the user actually entered something
     if (task.length > 0) {
@@ -17,6 +20,8 @@ class _TodoState extends State<Todo> {
     }
   }
 
+  /// Todoを削除しようとした時にプロンプトを表示するメソッド。
+  /// 削除の可否をユーザーに確認して、可であれば当該Todoを削除する。
   void _promptRemoveTodoItem(int index) {
     showDialog(
       context: context,

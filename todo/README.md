@@ -1,6 +1,24 @@
 # todo
 
-A new Flutter project.
+FlutterでTODOアプリを作るプロジェクトです。
+
+## コマンド備忘録
+
+```zsh
+# エミュレータ一覧
+flutter emulators
+# エミュレータ起動
+flutter emulators --launch Pixel_5_API_32
+
+# デバイス一覧
+flutter devices
+# デバイスを指定して起動（起動中にrでホットリロード...だったかな）
+flutter run -d emulator-5554
+
+# 起動しようとしたら動かない...という時は
+flutter clean
+flutter pub get
+```
 
 ## Getting Started
 
